@@ -51,3 +51,11 @@ app.include_router(
     prefix="/api/v1",
     tags=["Concept Generation"]
 )
+
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "service": "IdeaForge AI backend running"
+    }
+
